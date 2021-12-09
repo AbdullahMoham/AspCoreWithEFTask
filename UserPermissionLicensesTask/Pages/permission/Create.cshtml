@@ -1,0 +1,17 @@
+﻿@page
+@model UserPermissionLicensesTask.Pages.permission.CreateModel
+@{
+}
+
+
+<h2>Create New Permission</h2>
+
+<form method="post">
+    <span style="color:red" asp-validation-for="@Model.permission.Permission_Title"></span>
+    <br />
+    <label asp-for="@Model.permission.Permission_Title">Permission_Title:</label><br>
+    <input type="text" asp-for="@Model.permission.Permission_Title"><br>
+    <br /><br />
+    <a class="btn btn-default" asp-page="showpermissions">Bake To List</a>
+    <input type="submit" value="Create">
+</form>

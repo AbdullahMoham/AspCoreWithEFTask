@@ -1,0 +1,52 @@
+﻿@page
+@model UserPermissionLicensesTask.Pages.license.showlicensesModel
+@{
+}
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+
+<h2>
+    <a class="btn btn-info" asp-page="Create">Create New License</a>
+</h2>
+
+<table>
+    <tr>
+        <th>Licenses_ID</th>
+        <th>User_First_Name</th>
+        <th>Permission_Title</th>
+        @*<th></th>*@
+    </tr>
+
+    @foreach (var item in Model.Alllicense)
+    {
+        <tr>
+            <td>@item.Licenses_ID</td>
+            <td>@item.user_ID.F_Name</td>
+            <td>@item.per_ID.Permission_Title</td>
+            @*<td>
+                    <a asp-page="Details" asp-route-id="@item.ID">Details</a>
+                    <a asp-page="Edit" asp-route-id="@item.ID"> | Edit | </a>
+                    <a asp-page="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>*@
+        </tr>
+    }
+
+</table>
+

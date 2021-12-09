@@ -1,0 +1,21 @@
+﻿@page
+@model UserPermissionLicensesTask.Pages.User.CreateModel
+@{
+}
+
+
+<h2>Create New User</h2>
+
+<form method="post">
+    <span style="color:red" asp-validation-for="@Model.user.F_Name"></span>
+    <br />
+    <label asp-for="@Model.user.F_Name">First_Name:</label><br>
+    <input type="text" asp-for="@Model.user.F_Name"><br>
+    <span style="color:red" asp-validation-for="@Model.user.L_Name"></span>
+    <br />
+    <label asp-for="@Model.user.L_Name">Last_Name:</label><br>
+    <input type="text" asp-for="@Model.user.L_Name"><br>
+    <br /><br />
+    <a class="btn btn-default" asp-page="ShowUsers">Bake To List</a>
+    <input type="submit" value="Create">
+</form>
